@@ -1,16 +1,29 @@
-//import { useState } from 'react'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
+import { useState } from "react";
 import "./App.css";
 
-function App() {
-  //const [count, setCount] = useState(0)
+const App = () => {
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      title: "Finish Progate React Course",
+      completed: false,
+    },
+  ]);
+
+  console.log(todos);
+
+  //const handleClick = () => {
+  //  setCount(count + 1);
+  //};
 
   return (
-    <>
-      <button className="btn w-64 rounded-full">Button</button>
-    </>
+    <div>
+      <h1>Kocak</h1>
+      {todos.map((todo) => {
+        return <p key={todo.id}>{todo.title}</p>;
+      })}
+    </div>
   );
-}
+};
 
 export default App;
