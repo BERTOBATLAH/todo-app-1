@@ -1,10 +1,10 @@
-import TodoItem from "./TodoItem.jsx";
-
+import Card from "./Card/card";
 const Todo = ({ todos }) => {
   return (
-    <div>
+    <div className="flex flex-wrap">
       {todos.map((todo) => {
-        return <TodoItem key={todo.id} todo={todo} />;
+        // Berikan datanya ke TodoItem
+        return <Card key={todo.id} todo={todo} />;
       })}
     </div>
   );
