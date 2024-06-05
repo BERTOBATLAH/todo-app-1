@@ -1,11 +1,12 @@
 import { useState } from "react";
+import Todo from "./components/Todo";
 import "./App.css";
 
-const App = () => {
+function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: "Finish Progate React Course",
+      tittle: "Finish Progate React Course",
       completed: false,
     },
   ]);
@@ -17,13 +18,11 @@ const App = () => {
   //};
 
   return (
-    <div>
-      <h1>Kocak</h1>
-      {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>;
-      })}
+    <div className="text-center p-12">
+      <h1>My Todo List</h1>
+      <Todo todos={todos} />
     </div>
   );
-};
+}
 
 export default App;
